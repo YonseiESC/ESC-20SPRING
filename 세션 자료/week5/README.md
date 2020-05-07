@@ -22,5 +22,5 @@ https://github.com/ageron/handson-ml2
 
 09_unsupervised_learning.ipynb
 
-이 파일 코드 다 따라하기 **(DBSCAN, Other Clustering Algorithms, Variational Bayesian Gaussian Mixtures 제외)** 설명도 나와있어서 쉽게 따라갈 수 있음. 우리가 다룬 / 앞으로 다룰 주제들에 대해 더 많은 코딩 예제를 연습하고 싶으면 이 리팟을 참고하시길. 이 코드의 교재는 *Hands–On Machine Learning with Scikit–Learn and TensorFlow 2e* 인데, 과제 목적으로는 없어도 무방.
+이 파일 코드 다 따라하기 **(DBSCAN, Other Clustering Algorithms, Variational Bayesian Gaussian Mixtures, Exercises 제외)** 설명도 나와있어서 쉽게 따라갈 수 있음. 우리가 다룬 / 앞으로 다룰 주제들에 대해 더 많은 코딩 예제를 연습하고 싶으면 이 리팟을 참고하시길. 이 코드의 교재는 *Hands–On Machine Learning with Scikit–Learn and TensorFlow 2e* 인데, 과제 목적으로는 없어도 무방.
 
