@@ -16,7 +16,13 @@ file_name = args.file_name
 
 df = pd.read_csv(file_name)
 
-X, y = df.iloc[:, :-1], df.iloc[:, -1]
+def y_check(df):
+    return "class" in df.columns
+
+if y_check(df):
+    X, y = df.iloc[:, :-1], df.iloc[:, -1]
+else:
+    X = df
 
 scaler = joblib.load('scaler.pkl')
 X = scaler.transform(X)
@@ -34,7 +40,7 @@ xgb_clf = joblib.load('xgb.pkl')
 xgb_probs = xgb_clf.predict_proba(X)
 
 def predict():
-    y_pred = np.empty_like(y, dtype=np.int)
+    y_pred = np.empty(shape=(X.shape[0], ), dtype=np.int)
     for i in range(len(y_pred)):
         pos = xgb_probs[i, 1]
         neg = xgb_probs[i, 0]
