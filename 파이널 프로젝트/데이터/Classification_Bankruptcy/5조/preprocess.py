@@ -94,7 +94,6 @@ if na_check(df):
         drop_list.append("Attr" + str(i))
 
     df.drop(drop_list, axis=1, inplace=True)
-    print(df.columns)
 
     imputer = joblib.load("median_imputer.pkl")
 
