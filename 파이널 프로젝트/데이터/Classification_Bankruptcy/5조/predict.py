@@ -4,6 +4,8 @@ import pandas as pd
 import pickle
 import joblib
 import warnings
+from xgboost import XGBClassifier, Booster
+
 
 warnings.filterwarnings('ignore')
 
@@ -30,7 +32,10 @@ X = scaler.transform(X)
 #lr_clf = joblib.load('logistic.pkl')
 #svm_clf = joblib.load('SVM_linear.pkl')
 #rf_clf = joblib.load('forest_01.pkl')
-xgb_clf = joblib.load('xgb.pkl')
+xgb_clf = XGBClassifier(learning_rate=0.3, max_depth=10, min_child_weight=0.1, gamma=0.2, colsample_bytree=0.7)
+booster = Booster()
+booster.load_model('xgb.xgb')
+xgb_clf._Booster = booster
 
 #scores = pickle.load(open('scores.pkl', 'rb'))
 

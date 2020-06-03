@@ -16,6 +16,9 @@ file_name = args.file_name
 
 df = pd.read_csv(file_name)
 
+for col in df.columns:
+    df[col] = df[col].replace("?", np.nan)
+
 def y_check(df):
     return "class" in df.columns
 
